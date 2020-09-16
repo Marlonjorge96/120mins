@@ -1,0 +1,21 @@
+create database sistema
+use sistema
+
+if OBJECT_ID('login')is not null
+drop table login
+create table login
+(
+id int not null primary key identity(1,1),
+usuario varchar(50) not null,
+LastName varchar(50) not null,
+clave varchar(50)not null,
+Email varchar(100)not null,
+)
+
+if OBJECT_ID('tareas')is not null
+drop table tareas
+create table tareas(
+idtarea int identity(1,1) not null primary key,
+tipo_tarea varchar(100) not null,
+codtarea varchar(100)not null
+)
